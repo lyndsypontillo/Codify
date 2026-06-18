@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Ruby - Codify</title>
+    <style>
+        /* Reset and basic styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #2c1d1f; /* Dark ruby-inspired background */
+            color: #fff;
+            padding: 20px;
+            background-image: url('https://path-to-ruby-background-image.png'); /* Optional gem background */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Dim overlay for readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 29, 31, 0.8); /* Overlay for readability */
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+            padding: 30px;
+            background: #3e2527;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #e0115f; /* Ruby red */
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p.intro {
+            font-size: 1.2em;
+            color: #f3d5d7;
+            margin-bottom: 20px;
+        }
+
+        /* Code block styling */
+        pre {
+            text-align: left;
+            background: #2b1a1b;
+            padding: 15px;
+            border-radius: 8px;
+            color: #f3e6e7;
+            font-size: 1em;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .btn-back {
+            padding: 10px 20px;
+            background-color: #e0115f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-back:hover {
+            background-color: #c00e55;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Ruby Learning!</h1>
+        <p class="intro">Ruby is an elegant, object-oriented language designed to make programming both powerful and fun. Here's a quick example:</p>
+
+        <pre><code>
+        # Example code
+        puts "Hello, World!"
+        </code></pre>
+
+        <a href="{{ url_for('welcome') }}" class="btn-back">Back to Welcome Page</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Codify</title>
+    <style>
+        /* Reset and basic styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1d1f27; /* Dark coding theme */
+            color: #eee;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            padding: 30px;
+            background: #2c2f36;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #61dafb;
+            margin-bottom: 20px;
+        }
+
+        p.welcome-message {
+            font-size: 1.1em;
+            color: #bbb;
+            margin-bottom: 25px;
+        }
+
+        label {
+            color: #61dafb;
+            font-weight: bold;
+        }
+
+        select {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #1b1e23;
+            color: #eee;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #61dafb;
+            color: #1d1f27;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #4db8e5;
+        }
+
+        a {
+            display: block;
+            margin-top: 15px;
+            color: #61dafb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #4db8e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ username }}!</h1>
+        <p class="welcome-message">We're thrilled to have you here! Codify is your gateway to mastering programming. Choose your language and start learning.</p>
+
+        <form method="POST">
+            <label for="language">Choose a language:</label><br>
+            <select name="language" id="language">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="ruby">Ruby</option>
+            </select>
+            <button type="submit">Select Language</button>
+        </form>
+
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>

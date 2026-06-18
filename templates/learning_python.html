@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning - Codify</title>
+    <style>
+        /* Reset and basic styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1e1f26; /* Dark coding theme */
+            color: #eee;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            background: #282c34;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Python-themed snake background */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: url('https://path-to-snake-icon.png') no-repeat center;
+            background-size: cover;
+            opacity: 0.2;
+            transform: rotate(15deg);
+        }
+
+        h1 {
+            color: #ffd43b; /* Python yellow */
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p.welcome-message {
+            font-size: 1.2em;
+            color: #a9b2c3;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            padding: 12px 20px;
+            background-color: #306998; /* Python blue */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #285880;
+        }
+
+        .content-section {
+            margin-top: 20px;
+            text-align: left;
+            color: #a9b2c3;
+        }
+
+        .content-section h2 {
+            color: #ffd43b;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+        }
+
+        a.logout {
+            color: #61dafb;
+            text-decoration: none;
+            margin-top: 15px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        a.logout:hover {
+            color: #4db8e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Python Learning, {{ username }}!</h1>
+        <p class="welcome-message">Ready to dive into the world of Python? Start exploring the language that powers everything from web applications to artificial intelligence. Let’s get coding!</p>
+
+        <a href="#start-learning" class="btn-primary">Start Learning Python</a>
+
+        <div class="content-section" id="start-learning">
+            <h2>Why Learn Python?</h2>
+            <p>Python is a versatile and popular programming language known for its readability and community support. It’s perfect for beginners and has powerful libraries for data science, machine learning, and more.</p>
+
+            <h2>Topics Covered:</h2>
+            <ul>
+                <li>Python Basics: Variables, Data Types, and Operators</li>
+                <li>Control Structures: Loops and Conditionals</li>
+                <li>Functions and Modules</li>
+                <li>Data Structures: Lists, Dictionaries, and Sets</li>
+                <li>Object-Oriented Programming</li>
+            </ul>
+        </div>
+
+        <a href="{{ url_for('logout') }}" class="logout">Logout</a>
+    </div>
+</body>
+</html>

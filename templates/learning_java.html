@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Java - Codify</title>
+    <style>
+        /* Reset and basic styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #2b2b2b; /* Dark theme */
+            color: #eee;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            padding: 30px;
+            background: #3e3e3e;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Java coffee icon background */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 200px;
+            height: 200px;
+            background: url('https://path-to-coffee-icon.png') no-repeat center;
+            background-size: contain;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        h1 {
+            color: #f8981d; /* Java orange */
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p.intro {
+            font-size: 1.1em;
+            color: #d1d1d1;
+            margin-bottom: 20px;
+        }
+
+        /* Code block styling */
+        pre {
+            text-align: left;
+            background: #1f1f1f;
+            padding: 15px;
+            border-radius: 8px;
+            color: #c4e2ff;
+            font-size: 1em;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .btn-back {
+            padding: 10px 20px;
+            background-color: #f8981d;
+            color: #1f1f1f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-back:hover {
+            background-color: #e07c10;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Java Learning!</h1>
+        <p class="intro">Java is a powerful, object-oriented programming language widely used for building enterprise-grade applications. Let’s take a look at a quick example:</p>
+
+        <pre><code>
+        // Example code
+        public class HelloWorld {
+            public static void main(String[] args) {
+                System.out.println("Hello, World!");
+            }
+        }
+        </code></pre>
+
+        <a href="{{ url_for('welcome') }}" class="btn-back">Back to Welcome Page</a>
+    </div>
+</body>
+</html>

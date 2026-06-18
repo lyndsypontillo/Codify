@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JavaScript - Codify</title>
+    <style>
+        /* Reset and basic styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1d1f21; /* Dark theme */
+            color: #eee;
+            padding: 20px;
+            background-image: url('https://path-to-code-background-image.jpg'); /* Add background image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Dim overlay for readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 650px;
+            width: 100%;
+            padding: 30px;
+            background: #222629;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #f0db4f; /* JavaScript yellow */
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p.intro {
+            font-size: 1.2em;
+            color: #cdd1d5;
+            margin-bottom: 20px;
+        }
+
+        /* Code block styling */
+        pre {
+            text-align: left;
+            background: #1e272c;
+            padding: 15px;
+            border-radius: 8px;
+            color: #f1f1f1;
+            font-size: 1em;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .btn-back {
+            padding: 10px 20px;
+            background-color: #f0db4f;
+            color: #222629;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-back:hover {
+            background-color: #e5c729;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to JavaScript Learning!</h1>
+        <p class="intro">JavaScript is the language of the web, bringing interactivity and dynamism to web pages. Let's start with a simple example:</p>
+
+        <pre><code>
+        // Example code
+        console.log("Hello, World!");
+        </code></pre>
+
+        <a href="{{ url_for('welcome') }}" class="btn-back">Back to Welcome Page</a>
+    </div>
+</body>
+</html>
